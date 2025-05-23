@@ -1,0 +1,74 @@
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 15%;
+  padding: 4rem 0;
+  margin: 0.5rem 0.5rem;
+  background-color: var(--gray);
+  border-radius: 2rem 0rem 0rem 2rem;
+}
+
+.sidebarContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.group {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-self: flex-start;
+}
+
+.groupTitle {
+  font-size: 0.9rem;
+  color: var(--gray-light);
+}
+
+.ul {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.li {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1.1rem;
+  color: var(--text-unactive);
+  font-weight: 400;
+}
+
+.liUnactive {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1.1rem;
+  color: var(--dark-blue);
+  font-weight: 400;
+}
+
+.icon {
+  font-size: 1.5rem;
+}
+
+.title {
+  font-size: 1.8rem;
+  font-weight: 500;
+  color: var(--cyan);
+}
+
+.span {
+  color: var(--dark-blue);
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+
+.settings {
+  margin-top: 8rem;
+}

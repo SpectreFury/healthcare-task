@@ -1,0 +1,16 @@
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  padding: 4rem 0;
+  margin: 0.5rem 0.5rem;
+}
+
+.dashboardContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.input {
+}
