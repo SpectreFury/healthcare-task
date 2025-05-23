@@ -8,9 +8,51 @@
 }
 
 .dashboardContainer {
+  width: 95%;
   display: flex;
+  align-items: center;
   flex-direction: column;
 }
 
+.inputWrapper {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.searchIcon {
+  position: absolute;
+  left: 1rem;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  pointer-events: none;
+  color: var(--dark-blue);
+}
+
+.magnifyingGlassIcon {
+  position: absolute;
+  right: 1rem;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  pointer-events: none;
+  color: var(--dark-blue);
+}
+
 .input {
+  width: 100%;
+  padding: 1rem 0.5rem 1rem 2.5rem;
+  box-sizing: border-box;
+  border: 1.5px solid #d0d7e2;
+  border-radius: 8px;
+  outline: none;
+  background: #f8fafc;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.input:focus {
+  border-color: #a3bffa;
+  box-shadow: 0 0 0 2px #e6effc;
 }
