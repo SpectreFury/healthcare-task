@@ -1,9 +1,8 @@
 .activity {
   background-color: var(--gray);
   width: 100%;
-  min-height: 200px;
+  border-radius: 2rem;
   padding: 1rem;
-    border-radius: 2rem;
 }
 
 .header {
@@ -19,6 +18,26 @@
 }
 
 .paragraph {
+  color: var(--text-unactive);
+  font-size: 0.9rem;
+}
+
+.graph {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.graphImage {
+  width: 90%;
+}
+
+.days {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
   color: var(--text-unactive);
   font-size: 0.9rem;
 }
