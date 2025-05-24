@@ -1,0 +1,36 @@
+.card {
+  background-color: var(--card-light);
+  padding: 1.5rem 2rem;
+  border-radius: 2rem;
+  color: var(--dark-blue);
+  display: flex;
+  flex-direction: column;
+  margin-top: 1rem;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+}
+
+.title {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.emoji {
+  font-size: 1.2rem;
+}
+
+.time {
+  margin-top: 0.5rem;
+  font-weight: 400;
+  font-size: 0.9rem;
+}
+
+.doctor {
+  font-weight: 400;
+  font-size: 0.9rem;
+}

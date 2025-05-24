@@ -1,0 +1,50 @@
+.dayContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--gray);
+  color: var(--dark-blue);
+  padding: 0.5rem 1rem;
+}
+
+.dayHighlighted {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--highlighted);
+  color: var(--dark-blue);
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+}
+
+.dayHeading {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.dayDate {
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+
+.dayTimes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.dayTime {
+  font-size: 0.9rem;
+  font-weight: 400;
+  padding: 0.2rem 0.6rem;
+  border-radius: 5px;
+}
+
+.dayTimeHighlighted {
+  font-size: 0.9rem;
+  font-weight: 400;
+  background-color: var(--dark-blue);
+  color: white;
+  padding: 0.2rem 0.6rem ;
+  border-radius: 5px;
+}

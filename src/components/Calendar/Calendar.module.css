@@ -8,3 +8,157 @@
   background-color: var(--gray);
   border-radius: 0 2rem 2rem 0;
 }
+
+.header {
+  align-self: flex-end;
+  display: flex;
+  gap: 1rem;
+  margin-right: 4rem;
+}
+
+.button {
+  width: 3rem;
+  height: 3rem;
+  background: #3831a8;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.plus {
+  font-size: 1.5rem;
+  color: white;
+}
+
+.dateContainer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 4rem;
+  margin-top: 1.5rem;
+  color: var(--dark-blue);
+}
+
+.heading {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.arrows {
+  display: flex;
+  font-size: 1.5rem;
+}
+
+.calendarContainer {
+  width: 100%;
+  display: flex;
+  gap: 1.3rem;
+  margin-top: 1rem;
+  padding: 0 2rem;
+}
+
+.mergedContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--gray);
+  color: var(--dark-blue);
+  padding: 0.5rem 1rem;
+}
+
+.mergedText {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.mergedTextLight {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-unactive);
+}
+
+.date {
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+
+.dateLight {
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: var(--text-unactive);
+}
+
+.time {
+  display: flex;
+  font-size: 0.9rem;
+  font-weight: 400;
+  padding: 0.2rem 0.6rem;
+}
+.timeLight {
+  display: flex;
+  font-size: 0.9rem;
+  font-weight: 400;
+  padding: 0.2rem 0.6rem;
+  color: var(--text-unactive);
+}
+
+.box {
+  display: flex;
+  justify-content: space-between;
+  min-width: 100px;
+}
+
+.boxNoMargin {
+  display: flex;
+  justify-content: space-between;
+  min-width: 100px;
+}
+
+.mergedBox {
+  display: flex;
+  justify-content: space-between;
+  min-width: 100px;
+  background-color: var(--highlighted-dark);
+  border-radius: 5px;
+  color: white;
+}
+
+.timesContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cardsContainer {
+  width: 100%;
+  display: flex;
+  gap: 1.5rem;
+  padding: 0 4rem;
+}
+
+.appointmentContainer {
+  width: 100%;
+  padding: 0 4rem;
+  margin-top: 1rem;
+}
+
+.appointmentTitle {
+  font-size: 1.5rem;
+  color: var(--dark-blue);
+  font-weight: 500;
+}
+
+.appointmentSubtitle {
+  font-size: 1.2rem;
+  color: var(--text-unactive);
+  font-weight: 500;
+  margin-top: 1rem;
+}
+
+.appointmentCards {
+  width: 100%;
+  display: flex;
+  gap: 1.5rem;
+}
