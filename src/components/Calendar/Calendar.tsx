@@ -60,13 +60,13 @@ const Calendar = () => {
         </div>
       </div>
       <div className={styles.cardsContainer}>
-        {cards.map((card) => (
+        {cards.map((card, idx) => (
           <Card key={idx} {...card} />
         ))}
       </div>
       <div className={styles.appointmentContainer}>
         <h1 className={styles.appointmentTitle}>The Upcoming Schedule</h1>
-        {appointmentSchedule.map((sched, idx) => (
+        {appointmentSchedule.map((sched) => (
           <div key={sched.day}>
             <p className={styles.appointmentSubtitle}>On {sched.day}</p>
             <div className={styles.appointmentCards}>

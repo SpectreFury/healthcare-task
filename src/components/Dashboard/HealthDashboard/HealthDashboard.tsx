@@ -33,7 +33,7 @@ const HealthDashboard = () => {
             </div>
           </div>
           <div className={styles.cardOrganContainer}>
-            {dashboardData.organs.map((organ, idx) => (
+            {dashboardData.organs.map((organ) => (
               <div className={styles.cardOrgan} key={organ.label}>
                 <div className={styles.organContainer}>
                   <div className={styles.organTextContainer}>
