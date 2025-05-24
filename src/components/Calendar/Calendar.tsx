@@ -60,7 +60,7 @@ const Calendar = () => {
         </div>
       </div>
       <div className={styles.cardsContainer}>
-        {cards.map((card, idx) => (
+        {cards.map((card) => (
           <Card key={idx} {...card} />
         ))}
       </div>
