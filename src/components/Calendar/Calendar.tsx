@@ -5,39 +5,12 @@ import { RiArrowLeftFill, RiArrowRightFill } from "react-icons/ri";
 import Day from "./Day";
 import Card from "./Card";
 import AppointmentCard from "./AppointmentCard";
-
-const days = [
-  {
-    currentDay: "Mon",
-    date: 25,
-    times: ["8:00", "9:00", "10:00"],
-    isHighlighted: false,
-  },
-  {
-    currentDay: "Tue",
-    date: 26,
-    times: ["8:00", "9:00", "10:00"],
-    isHighlighted: true,
-  },
-  {
-    currentDay: "Wed",
-    date: 27,
-    times: ["8:00", "⎯⎯", "10:00"],
-    isHighlighted: false,
-  },
-  {
-    currentDay: "Thu",
-    date: 28,
-    times: ["8:00", "9:00", "⎯⎯"],
-    isHighlighted: false,
-  },
-  {
-    currentDay: "Fri",
-    date: 29,
-    times: ["⎯⎯", "9:00", "10:00"],
-    isHighlighted: false,
-  },
-];
+import {
+  calendarDays,
+  mergedDays,
+  cards,
+  appointmentSchedule,
+} from "../../data/calendarData";
 
 const Calendar = () => {
   return (
@@ -58,66 +31,51 @@ const Calendar = () => {
         </div>
       </div>
       <div className={styles.calendarContainer}>
-        {days.map((day, index) => (
+        {calendarDays.map((day, index) => (
           <Day key={index} day={day} index={index} />
         ))}
         <div className={styles.mergedContainer}>
           <div className={styles.box}>
-            <div className={styles.mergedText}>Sat</div>
-            <div className={styles.mergedTextLight}>Sun</div>
+            <div className={styles.mergedText}>{mergedDays.days[0]}</div>
+            <div className={styles.mergedTextLight}>{mergedDays.days[1]}</div>
           </div>
           <div className={styles.box}>
-            <div className={styles.date}>30</div>
-            <div className={styles.dateLight}>31</div>
+            <div className={styles.date}>{mergedDays.dates[0]}</div>
+            <div className={styles.dateLight}>{mergedDays.dates[1]}</div>
           </div>
           <div className={styles.timesContainer}>
             <div className={styles.mergedBox}>
-              <div className={styles.time}>12:00</div>
-              <div className={styles.time}>9:00</div>
+              <div className={styles.time}>{mergedDays.times[0][0]}</div>
+              <div className={styles.time}>{mergedDays.times[0][1]}</div>
             </div>
             <div className={styles.box}>
-              <div className={styles.time}>14:00</div>
-              <div className={styles.timeLight}>10:00</div>
+              <div className={styles.time}>{mergedDays.times[1][0]}</div>
+              <div className={styles.timeLight}>{mergedDays.times[1][1]}</div>
             </div>
             <div className={styles.box}>
-              <div className={styles.time}>15:00</div>
-              <div className={styles.timeLight}>11:00</div>
+              <div className={styles.time}>{mergedDays.times[2][0]}</div>
+              <div className={styles.timeLight}>{mergedDays.times[2][1]}</div>
             </div>
           </div>
         </div>
       </div>
       <div className={styles.cardsContainer}>
-        <Card
-          title="Dentist"
-          emoji="🦷"
-          time="09:00-11:00"
-          doctor="Dr. Cameron Williamson"
-          isDark={true}
-        />
-        <Card
-          title="Physiotherapy Appointment"
-          emoji="💪"
-          time="11:00-12:00"
-          doctor="Dr. Kevin Djones"
-          isDark={false}
-        />
+        {cards.map((card, idx) => (
+          <Card key={idx} {...card} />
+        ))}
       </div>
       <div className={styles.appointmentContainer}>
         <h1 className={styles.appointmentTitle}>The Upcoming Schedule</h1>
-        <p className={styles.appointmentSubtitle}>On Thursday</p>
-        <div className={styles.appointmentCards}>
-          <AppointmentCard
-            title="Health check complete"
-            emoji="💉"
-            time="11:00 AM"
-          />
-          <AppointmentCard title="Ophthalmologist" emoji="👁️" time="14:00 AM" />
-        </div>
-        <p className={styles.appointmentSubtitle}>On Saturday</p>
-        <div className={styles.appointmentCards}>
-          <AppointmentCard title="Cardiologist" emoji="❤️" time="11:00 AM" />
-          <AppointmentCard title="Neurologist" emoji="👨🏻‍⚕️" time="14:00 AM" />
-        </div>
+        {appointmentSchedule.map((sched, idx) => (
+          <div key={sched.day}>
+            <p className={styles.appointmentSubtitle}>On {sched.day}</p>
+            <div className={styles.appointmentCards}>
+              {sched.appointments.map((appt, i) => (
+                <AppointmentCard key={appt.title + i} {...appt} />
+              ))}
+            </div>
+          </div>
+        ))}
       </div>
     </section>
   );

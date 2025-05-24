@@ -1,10 +1,10 @@
 import { HiMiniMagnifyingGlassPlus } from "react-icons/hi2";
 import styles from "./HealthDashboard.module.css";
-
 import { IoChevronDown } from "react-icons/io5";
 import ProgressBar from "@ramonak/react-progress-bar";
 import { FaArrowRight } from "react-icons/fa";
 import Activity from "./Activity";
+import { dashboardData } from "../../../data/dashboardData";
 
 const HealthDashboard = () => {
   return (
@@ -13,73 +13,45 @@ const HealthDashboard = () => {
         <div className={styles.header}>
           <h1 className={styles.title}>Dashboard</h1>
           <div className={styles.dropdown}>
-            This week
+            {dashboardData.dropdownLabel}
             <IoChevronDown />
           </div>
         </div>
         <div className={styles.dashboardItems}>
           <div className={styles.cardHuman}>
-            <img src="./anatomy.png" className={styles.anatomy} />
+            <img src={dashboardData.anatomyImage} className={styles.anatomy} />
             <div className={styles.plusMagIcon}>
               <HiMiniMagnifyingGlassPlus />
             </div>
             <div className={styles.healthyHeart}>
-              <div>❤️</div>
-              <div>Healthy Heart</div>
+              <div>{dashboardData.healthyHeart.emoji}</div>
+              <div>{dashboardData.healthyHeart.label}</div>
             </div>
             <div className={styles.healthyLeg}>
-              <div>🦵</div>
-              <div>Healthy Leg</div>
+              <div>{dashboardData.healthyLeg.emoji}</div>
+              <div>{dashboardData.healthyLeg.label}</div>
             </div>
           </div>
           <div className={styles.cardOrganContainer}>
-            <div className={styles.cardOrgan}>
-              <div className={styles.organContainer}>
-                <div className={styles.organTextContainer}>
-                  <span className={styles.cardEmoji}>🫁</span>
-                  <span className={styles.cardText}>Lungs</span>
+            {dashboardData.organs.map((organ, idx) => (
+              <div className={styles.cardOrgan} key={organ.label}>
+                <div className={styles.organContainer}>
+                  <div className={styles.organTextContainer}>
+                    <span className={styles.cardEmoji}>{organ.emoji}</span>
+                    <span className={styles.cardText}>{organ.label}</span>
+                  </div>
+                  <p className={styles.date}>Date: {organ.date}</p>
+                  <ProgressBar
+                    completed={organ.progress}
+                    isLabelVisible={false}
+                    height="0.75rem"
+                    bgColor={organ.color}
+                  />
                 </div>
-                <p className={styles.date}>Date: 26 Oct 2021</p>
-                <ProgressBar
-                  completed={75}
-                  isLabelVisible={false}
-                  height="0.75rem"
-                  bgColor="#b44e4e"
-                />
               </div>
-            </div>
-            <div className={styles.cardOrgan}>
-              <div className={styles.organContainer}>
-                <div>
-                  <span className={styles.cardEmoji}>🦷</span>
-                  <span className={styles.cardText}>Teeth</span>
-                </div>
-                <p className={styles.date}>Date: 26 Oct 2021</p>
-                <ProgressBar
-                  completed={75}
-                  isLabelVisible={false}
-                  height="0.75rem"
-                  bgColor="#7ccbbe"
-                />
-              </div>
-            </div>
-            <div className={styles.cardOrgan}>
-              <div className={styles.organContainer}>
-                <div>
-                  <span className={styles.cardEmoji}>🦴</span>
-                  <span className={styles.cardText}>Bone</span>
-                </div>
-                <p className={styles.date}>Date: 26 Oct 2021</p>
-                <ProgressBar
-                  completed={75}
-                  isLabelVisible={false}
-                  height="0.75rem"
-                  bgColor="#ff7e61"
-                />
-              </div>
-            </div>
+            ))}
             <div className={styles.detailsText}>
-              Details
+              {dashboardData.detailsLabel}
               <div className={styles.arrowIcon}>
                 <FaArrowRight />
               </div>
