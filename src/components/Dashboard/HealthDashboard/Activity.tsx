@@ -1,6 +1,4 @@
-import { useState } from "react";
 import styles from "./Activity.module.css";
-import ReactApexChart from "react-apexcharts";
 
 const Activity = () => {
   return (

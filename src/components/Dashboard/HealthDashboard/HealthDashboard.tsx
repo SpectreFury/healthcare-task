@@ -23,6 +23,14 @@ const HealthDashboard = () => {
             <div className={styles.plusMagIcon}>
               <HiMiniMagnifyingGlassPlus />
             </div>
+            <div className={styles.healthyHeart}>
+              <div>❤️</div>
+              <div>Healthy Heart</div>
+            </div>
+            <div className={styles.healthyLeg}>
+              <div>🦵</div>
+              <div>Healthy Leg</div>
+            </div>
           </div>
           <div className={styles.cardOrganContainer}>
             <div className={styles.cardOrgan}>

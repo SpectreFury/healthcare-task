@@ -32,6 +32,7 @@
 
 .graphImage {
   width: 90%;
+  max-height: 150px;
 }
 
 .days {
